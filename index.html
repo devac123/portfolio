@@ -12,73 +12,71 @@
             margin: 0;
             padding: 0;
             background-color: #121212;
-            color: #fff;
+            color: #ffffff;
             overflow-x: hidden;
         }
         header {
-            background: linear-gradient(to right, #ff416c, #ff4b2b);
-            color: #fff;
+            background: url('prtcover_imag.webp') no-repeat center center/cover;
+            color: #ffffff;
             text-align: center;
-            padding: 100px 20px;
-            animation: fadeIn 2s ease-in-out;
+            padding: 150px 20px;
             font-size: 1.5em;
+            position: relative;
         }
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
         }
-        section {
-            max-width: 900px;
+        header h1, header p {
+            position: relative;
+            z-index: 2;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 1200px;
             margin: 40px auto;
-            padding: 30px;
-            background: #1e1e1e;
+            background: rgba(28, 28, 28, 0.9);
             border-radius: 12px;
-            box-shadow: 0 0 20px rgba(255, 75, 43, 0.4);
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease-in-out;
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            gap: 30px;
         }
-        .visible {
-            opacity: 1 !important;
-            transform: translateY(0) !important;
+        .text-content {
+            flex: 1;
+            padding-right: 20px;
+        }
+        .image-content {
+            flex: 1;
+            text-align: center;
+        }
+        .image-content img {
+            width: 100%;
+            max-width: 450px;
+        }
+        #portfolio .image-content img {
+            max-width: 500px;
+        }
+        #contact .image-content img {
+            max-width: 350px;
         }
         h1, h2 {
-            color: #ff4b2b;
-        }
-        .portfolio-item {
-            background: #252525;
-            padding: 15px;
-            margin: 10px 0;
-            border-radius: 8px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center;
-        }
-        .portfolio-item img {
-            width: 100%;
-            max-width: 500px;
-            border-radius: 8px;
-            margin-top: 10px;
-        }
-        .portfolio-item:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 15px rgba(255, 75, 43, 0.6);
-        }
-        .contact-icons a {
-            display: inline-block;
-            margin: 10px;
-            font-size: 28px;
-            color: #ff4b2b;
-            text-decoration: none;
-            transition: transform 0.3s ease-in-out;
-        }
-        .contact-icons a:hover {
-            transform: scale(1.3);
+            color: #00bcd4;
         }
         footer {
             text-align: center;
             padding: 20px;
-            background: #ff4b2b;
-            color: #fff;
+            background: rgba(30, 30, 30, 0.9);
+            color: #ffffff;
+        }
+        .container:nth-child(even) {
+            flex-direction: row-reverse;
         }
     </style>
 </head>
@@ -86,63 +84,121 @@
 
 <header>
     <h1>Shubham's Portfolio</h1>
-    <p>Drupal | Shopify | Python | PHP | Django Developer</p>
+    <p>Drupal | Shopify | Django | Automation Expert</p>
 </header>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>I am a web developer with 3+ years of experience in Drupal, Django, Python, and Shopify development.</p>
-</section>
-
-<section id="work-history">
-    <h2>Work History</h2>
-    <div class="portfolio-item">
-        <h3>Drupal Development for XYZ Corp</h3>
-        <p>Built a custom Drupal-based CMS for a corporate client.</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/89/Drupal_Logo.svg" alt="Drupal Project">
+<section class="container" id="about">
+    <div class="text-content">
+        <h2>About Me</h2>
+        <p>I am a web developer with 3+ years of experience in Drupal, Django, Python, and Shopify development.</p>
+        <p>My expertise lies in building scalable and efficient web applications. I have worked with both startups and enterprises, helping them develop high-performance websites and automated workflows.</p>
+        <p>With a strong foundation in backend development, I specialize in API integrations, e-commerce solutions, and workflow automation using Make.com.</p>
+    </div>
+    <div class="image-content">
+        <img src="about_me.webp" alt="Web Developer Vector">
     </div>
 </section>
 
-<section id="portfolio">
-    <h2>Portfolio</h2>
-    <div class="portfolio-item">
-        <h3>Custom Drupal Module</h3>
-        <p>A Drupal module that extends eCommerce functionality.</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5f/Shopify_Logo.svg" alt="Shopify Project">
-    </div>
-    <div class="portfolio-item">
-        <h3>Shopify Automation with Make.com</h3>
-        <p>Integrated Make.com workflows for Shopify automation.</p>
-        <img src="https://www.make.com/en/media/pages/home/ee320a589b-1678376760/make-share.jpg" alt="Make.com Workflow">
+
+<section class="container" id="drupal">
+    <div class="text-content">
+        <h2>Drupal Development</h2>
+        <p>As a Drupal expert, I specialize in developing robust, scalable, and high-performing websites using Drupal CMS.</p>
+        <ul>
+            <li>Created custom Drupal modules to extend functionality.</li>
+            <li>Designed and implemented custom Drupal themes.</li>
+            <li>Migrated Drupal sites without data loss.</li>
+            <li>Developed an eCommerce website in Drupal, including custom functionality like sending recommendations for related products.</li>
+            <li>Integrated third-party APIs with Drupal for seamless data exchange.</li>
+            <li>Optimized Drupal websites for better performance and security.</li>
+            <li>Upgraded and maintained Drupal 7, 8, 9, and 10 sites.</li>
+        </ul>
     </div>
 </section>
 
-<section id="contact">
-    <h2>Contact Me</h2>
-    <div class="contact-icons">
-        <a href="#">📧</a>
-        <a href="#">💼</a>
-        <a href="#">🔗</a>
+<section class="container" id="shopify">
+    <div class="text-content">
+        <h2>Shopify Development</h2>
+        <p>As a Shopify developer, I have built and customized multiple stores for various industries, focusing on performance and functionality.</p>
+        <ul>
+            <li>Developed custom Shopify themes to align with brand identity.</li>
+            <li>Built and configured Shopify stores from scratch.</li>
+            <li>Integrated third-party apps and APIs to enhance store functionality.</li>
+            <li>Created custom Shopify scripts to optimize checkout and user experience.</li>
+            <li>Implemented advanced Shopify Liquid programming for store customization.</li>
+            <li>Configured payment gateways and shipping methods.</li>
+            <li>Enhanced store performance through speed optimization techniques.</li>
+            <li>Implemented Shopify Flow for store automation.</li>
+        </ul>
+    </div>
+   
+</section>
+
+<section class="container" id="django">
+    <div class="text-content">
+        <h2>Django Development</h2>
+        <p>As a Django developer, I build scalable, high-performance web applications with a strong focus on backend logic and API development.</p>
+        <ul>
+            <li>Developed and maintained Django-based web applications.</li>
+            <li>Built RESTful APIs using Django REST Framework (DRF).</li>
+            <li>Implemented authentication and authorization using JWT and OAuth.</li>
+            <li>Integrated third-party services and APIs.</li>
+            <li>Optimized database queries for better performance using PostgreSQL.</li>
+            <li>Containerized Django applications using Docker and Docker Compose.</li>
+            <li>Deployed Django applications on AWS using EC2, RDS, and S3.</li>
+            <li>Configured Celery and Redis for background task processing.</li>
+        </ul>
+    </div>
+   
+</section>
+
+<section class="container" id="automation">
+    <div class="text-content">
+        <h2>Automation</h2>
+        <p>Expertise in automating business workflows using Python, Make.com, Zapier, Latenode, and other automation tools to improve efficiency.</p>
+        <ul>
+            <li>Automated business processes using Python scripts.</li>
+            <li>Created workflow automation using Make.com, Zapier, and Latenode.</li>
+            <li>Integrated APIs to automate repetitive tasks.</li>
+            <li>Developed automated data migration and synchronization processes.</li>
+            <li>Optimized workflows to reduce manual intervention and increase efficiency.</li>
+            <li>Built custom integrations between various platforms using no-code and low-code solutions.</li>
+        </ul>
+    </div>
+</section>
+
+
+<section class="container" id="portfolio">
+    <div class="text-content">
+        <h2>Portfolio</h2>
+        <p>Here are some of my recent projects in Drupal, Shopify, Django, and automation:</p>
+        <ul>
+            <li><strong>Drupal CMS Implementation:</strong> Developed robust and scalable content management systems using Drupal, integrating custom themes, modules, and performance optimizations.</li>
+            <li><strong>Custom Shopify Store Development:</strong> Created customized Shopify e-commerce solutions, including theme customization, app integrations, and payment gateway setups.</li>
+            <li><strong>Python Automation for Business Workflows:</strong> Designed and implemented automation scripts using Python, reducing manual efforts and improving efficiency.</li>
+            <li><strong>API Integrations and Backend Solutions:</strong> Integrated third-party APIs and built secure backend systems to enhance application functionality and user experience.</li>
+        </ul>
+    </div>
+    <div class="image-content">
+        <img src="portfolio.webp" alt="Portfolio Work">
+    </div>
+</section>
+
+<section class="container" id="contact">
+    <div class="text-content">
+        <h2>Contact Me</h2>
+        <p>Let's connect! You can reach me via email or LinkedIn.</p>
+        <p><strong>Email:</strong> shubham@example.com</p>
+        <p><strong>LinkedIn:</strong> <a href="#" style="color: #00bcd4;">linkedin.com/in/shubham</a></p>
+    </div>
+    <div class="image-content">
+        <img src="contactme.webp" alt="Contact Me">
     </div>
 </section>
 
 <footer>
     <p>&copy; 2025 Shubham | All rights reserved.</p>
 </footer>
-
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let sections = document.querySelectorAll("section");
-        let observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add("visible");
-                }
-            });
-        }, { threshold: 0.2 });
-        sections.forEach(section => observer.observe(section));
-    });
-</script>
 
 </body>
 </html>
