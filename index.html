@@ -3,202 +3,170 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shubham's Portfolio</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-        
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #121212;
-            color: #ffffff;
-            overflow-x: hidden;
-        }
-        header {
-            background: url('prtcover_imag.webp') no-repeat center center/cover;
-            color: #ffffff;
-            text-align: center;
-            padding: 150px 20px;
-            font-size: 1.5em;
-            position: relative;
-        }
-        header::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.6);
-        }
-        header h1, header p {
-            position: relative;
-            z-index: 2;
-        }
-        .container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            max-width: 1200px;
-            margin: 40px auto;
-            background: rgba(28, 28, 28, 0.9);
-            border-radius: 12px;
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
-            padding: 50px;
-            gap: 30px;
-        }
-        .text-content {
-            flex: 1;
-            padding-right: 20px;
-        }
-        .image-content {
-            flex: 1;
-            text-align: center;
-        }
-        .image-content img {
-            width: 100%;
-            max-width: 450px;
-        }
-        #portfolio .image-content img {
-            max-width: 500px;
-        }
-        #contact .image-content img {
-            max-width: 350px;
-        }
-        h1, h2 {
-            color: #00bcd4;
-        }
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: rgba(30, 30, 30, 0.9);
-            color: #ffffff;
-        }
-        .container:nth-child(even) {
-            flex-direction: row-reverse;
-        }
-    </style>
+    <title>Portfolio - Web Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-
-<header>
-    <h1>Shubham's Portfolio</h1>
-    <p>Drupal | Shopify | Django | Automation Expert</p>
-</header>
-
-<section class="container" id="about">
-    <div class="text-content">
-        <h2>About Me</h2>
-        <p>I am a web developer with 3+ years of experience in Drupal, Django, Python, and Shopify development.</p>
-        <p>My expertise lies in building scalable and efficient web applications. I have worked with both startups and enterprises, helping them develop high-performance websites and automated workflows.</p>
-        <p>With a strong foundation in backend development, I specialize in API integrations, e-commerce solutions, and workflow automation using Make.com.</p>
-    </div>
-    <div class="image-content">
-        <img src="about_me.webp" alt="Web Developer Vector">
-    </div>
-</section>
-
-
-<section class="container" id="drupal">
-    <div class="text-content">
-        <h2>Drupal Development</h2>
-        <p>As a Drupal expert, I specialize in developing robust, scalable, and high-performing websites using Drupal CMS.</p>
-        <ul>
-            <li>Created custom Drupal modules to extend functionality.</li>
-            <li>Designed and implemented custom Drupal themes.</li>
-            <li>Migrated Drupal sites without data loss.</li>
-            <li>Developed an eCommerce website in Drupal, including custom functionality like sending recommendations for related products.</li>
-            <li>Integrated third-party APIs with Drupal for seamless data exchange.</li>
-            <li>Optimized Drupal websites for better performance and security.</li>
-            <li>Upgraded and maintained Drupal 7, 8, 9, and 10 sites.</li>
+    <nav class="navbar">
+        <div class="logo">Shubham's Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
-    </div>
-</section>
+    </nav>
 
-<section class="container" id="shopify">
-    <div class="text-content">
-        <h2>Shopify Development</h2>
-        <p>As a Shopify developer, I have built and customized multiple stores for various industries, focusing on performance and functionality.</p>
-        <ul>
-            <li>Developed custom Shopify themes to align with brand identity.</li>
-            <li>Built and configured Shopify stores from scratch.</li>
-            <li>Integrated third-party apps and APIs to enhance store functionality.</li>
-            <li>Created custom Shopify scripts to optimize checkout and user experience.</li>
-            <li>Implemented advanced Shopify Liquid programming for store customization.</li>
-            <li>Configured payment gateways and shipping methods.</li>
-            <li>Enhanced store performance through speed optimization techniques.</li>
-            <li>Implemented Shopify Flow for store automation.</li>
-        </ul>
-    </div>
-   
-</section>
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="animate-text">Hi, I'm a Full-Stack Web Developer</h1>
+            <p class="animate-text">Crafting exceptional digital experiences with expertise in Drupal, Shopify, Python, and Workflow Automation</p>
+            <div class="cta-button">
+                <a href="#contact" class="btn">Let's Build Something Amazing</a>
+            </div>
+        </div>
+    </section>
 
-<section class="container" id="django">
-    <div class="text-content">
-        <h2>Django Development</h2>
-        <p>As a Django developer, I build scalable, high-performance web applications with a strong focus on backend logic and API development.</p>
-        <ul>
-            <li>Developed and maintained Django-based web applications.</li>
-            <li>Built RESTful APIs using Django REST Framework (DRF).</li>
-            <li>Implemented authentication and authorization using JWT and OAuth.</li>
-            <li>Integrated third-party services and APIs.</li>
-            <li>Optimized database queries for better performance using PostgreSQL.</li>
-            <li>Containerized Django applications using Docker and Docker Compose.</li>
-            <li>Deployed Django applications on AWS using EC2, RDS, and S3.</li>
-            <li>Configured Celery and Redis for background task processing.</li>
-        </ul>
-    </div>
-   
-</section>
+    <section id="skills" class="skills">
+        <h2>Technical Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fab fa-drupal"></i>
+                <h3>Drupal Development</h3>
+                <p>Expert in custom theme development, module creation, performance optimization, and enterprise-level site architecture</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-shopify"></i>
+                <h3>Shopify Development</h3>
+                <p>Specialized in custom theme development, app integration, and scalable e-commerce solutions</p>
+            </div>
+            <div class="skill-card">
+                <i class="fab fa-python"></i>
+                <h3>Python Development</h3>
+                <p>Proficient in Django framework, RESTful APIs, and backend system architecture</p>
+            </div>
+            <div class="skill-card">
+                <i class="fas fa-robot"></i>
+                <h3>Workflow Automation</h3>
+                <p>Expert in creating efficient business processes using Make.com and Zapier.com integrations</p>
+            </div>
+        </div>
+    </section>
 
-<section class="container" id="automation">
-    <div class="text-content">
-        <h2>Automation</h2>
-        <p>Expertise in automating business workflows using Python, Make.com, Zapier, Latenode, and other automation tools to improve efficiency.</p>
-        <ul>
-            <li>Automated business processes using Python scripts.</li>
-            <li>Created workflow automation using Make.com, Zapier, and Latenode.</li>
-            <li>Integrated APIs to automate repetitive tasks.</li>
-            <li>Developed automated data migration and synchronization processes.</li>
-            <li>Optimized workflows to reduce manual intervention and increase efficiency.</li>
-            <li>Built custom integrations between various platforms using no-code and low-code solutions.</li>
-        </ul>
-    </div>
-</section>
+    <section id="experience" class="experience">
+        <h2>Professional Journey</h2>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Senior Drupal Developer</h3>
+                    <p class="timeline-date">2020 - Present</p>
+                    <p>Led the development of enterprise-level Drupal solutions, implementing custom modules and optimizing performance for high-traffic websites. Successfully reduced page load times by 40% through advanced caching strategies and code optimization.</p>
+                    <ul class="timeline-achievements">
+                        <li>Developed custom Drupal 9/10 modules for complex business requirements</li>
+                        <li>Implemented headless Drupal architecture for enhanced performance</li>
+                        <li>Mentored junior developers and conducted code reviews</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>E-commerce Solutions Architect</h3>
+                    <p class="timeline-date">2018 - 2020</p>
+                    <p>Architected and developed scalable e-commerce platforms on Shopify, implementing custom features and integrating third-party applications. Increased client revenue by 35% through optimized checkout flows and personalized shopping experiences.</p>
+                    <ul class="timeline-achievements">
+                        <li>Built custom Shopify apps for inventory management</li>
+                        <li>Integrated advanced analytics and reporting systems</li>
+                        <li>Developed custom checkout processes for enterprise clients</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Python/Django Developer</h3>
+                    <p class="timeline-date">2016 - 2018</p>
+                    <p>Built scalable web applications using Django, focusing on clean architecture and efficient database design. Developed RESTful APIs that served over 1 million requests daily with 99.9% uptime.</p>
+                    <ul class="timeline-achievements">
+                        <li>Implemented microservices architecture for better scalability</li>
+                        <li>Developed real-time data processing systems</li>
+                        <li>Created automated testing and deployment pipelines</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Automation Specialist</h3>
+                    <p class="timeline-date">2014 - 2016</p>
+                    <p>Designed and implemented automated workflows that increased business efficiency by 40%. Integrated various business systems using Make.com and Zapier, reducing manual work by 60%.</p>
+                    <ul class="timeline-achievements">
+                        <li>Created automated CRM and marketing workflows</li>
+                        <li>Developed custom integration solutions for legacy systems</li>
+                        <li>Implemented automated reporting and analytics</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <section id="projects" class="projects">
+        <h2>Featured Projects</h2>
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="https://placehold.co/600x400/2563eb/ffffff?text=Drupal+E-commerce" alt="Drupal E-commerce Platform">
+                <h3>Enterprise E-commerce Platform</h3>
+                <p>Built a high-performance Drupal-based e-commerce solution with custom payment gateway integration and advanced inventory management</p>
+                <div class="project-tech">
+                    <span>Drupal</span>
+                    <span>PHP</span>
+                    <span>MySQL</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://placehold.co/600x400/1e40af/ffffff?text=Shopify+Store" alt="Custom Shopify Store">
+                <h3>Luxury Fashion E-commerce</h3>
+                <p>Developed a custom Shopify theme with advanced product filtering, AR product preview, and seamless checkout experience</p>
+                <div class="project-tech">
+                    <span>Shopify</span>
+                    <span>Liquid</span>
+                    <span>JavaScript</span>
+                </div>
+            </div>
+            <div class="project-card">
+                <img src="https://placehold.co/600x400/1f2937/ffffff?text=Automation+Dashboard" alt="Workflow Automation Dashboard">
+                <h3>Business Process Automation</h3>
+                <p>Created an automated workflow system integrating CRM, email marketing, and inventory management using Make.com</p>
+                <div class="project-tech">
+                    <span>Make.com</span>
+                    <span>API Integration</span>
+                    <span>Zapier</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section class="container" id="portfolio">
-    <div class="text-content">
-        <h2>Portfolio</h2>
-        <p>Here are some of my recent projects in Drupal, Shopify, Django, and automation:</p>
-        <ul>
-            <li><strong>Drupal CMS Implementation:</strong> Developed robust and scalable content management systems using Drupal, integrating custom themes, modules, and performance optimizations.</li>
-            <li><strong>Custom Shopify Store Development:</strong> Created customized Shopify e-commerce solutions, including theme customization, app integrations, and payment gateway setups.</li>
-            <li><strong>Python Automation for Business Workflows:</strong> Designed and implemented automation scripts using Python, reducing manual efforts and improving efficiency.</li>
-            <li><strong>API Integrations and Backend Solutions:</strong> Integrated third-party APIs and built secure backend systems to enhance application functionality and user experience.</li>
-        </ul>
-    </div>
-    <div class="image-content">
-        <img src="portfolio.webp" alt="Portfolio Work">
-    </div>
-</section>
+    <section id="contact" class="contact">
+        <h2>Let's Collaborate</h2>
+        <div class="contact-form">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Tell me about your project" required></textarea>
+                <button type="submit" class="btn">Start a Conversation</button>
+            </form>
+        </div>
+    </section>
 
-<section class="container" id="contact">
-    <div class="text-content">
-        <h2>Contact Me</h2>
-        <p>Let's connect! You can reach me via email or LinkedIn.</p>
-        <p><strong>Email:</strong> shubham@example.com</p>
-        <p><strong>LinkedIn:</strong> <a href="#" style="color: #00bcd4;">linkedin.com/in/shubham</a></p>
-    </div>
-    <div class="image-content">
-        <img src="contactme.webp" alt="Contact Me">
-    </div>
-</section>
+    <footer>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p>&copy; 2024 Your Name. All rights reserved.</p>
+    </footer>
 
-<footer>
-    <p>&copy; 2025 Shubham | All rights reserved.</p>
-</footer>
-
+    <script src="script.js"></script>
 </body>
-</html>
+</html> 
